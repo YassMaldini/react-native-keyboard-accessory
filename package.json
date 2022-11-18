@@ -43,8 +43,5 @@
   },
   "devDependencies": {
     "fs-extra": "^6.0.1"
-  },
-  "directories": {
-    "bin": "build"
   }
 }
