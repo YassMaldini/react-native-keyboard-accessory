@@ -19,7 +19,7 @@ interface KeyboardAccessoryProps {
   hiddenOpacity?: number;
   hideBorder?: boolean;
   inSafeAreaView?: boolean;
-  androidAdjustResize?: boolean;
+  adjustResize?: boolean;
   avoidKeyboard?: boolean;
 }
 

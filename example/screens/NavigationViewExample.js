@@ -118,7 +118,7 @@ class NavigationViewExample extends Component {
           onNext={this.handleFocusNext}
           onPrevious={this.handleFocusPrevious}
           avoidKeyboard
-          androidAdjustResize
+          adjustResize
         />
       </View>
     );

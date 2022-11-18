@@ -80,12 +80,9 @@ class KeyboardAccessoryView extends Component {
       return;
     }
 
-    const keyboardHeight = Platform.select({
-      ios: keyboardEvent.endCoordinates.height,
-      android: this.props.androidAdjustResize
-        ? 0
-        : keyboardEvent.endCoordinates.height
-    });
+    const keyboardHeight = this.props.adjustResize ? 
+      0 : 
+      keyboardEvent.endCoordinates.height;
 
     const keyboardAnimate = () => {
       const { animationConfig, animateOn } = this.props;
@@ -190,7 +187,7 @@ KeyboardAccessoryView.propTypes = {
   heightProperty: PropTypes.oneOf(["height", "minHeight"]),
   hiddenOpacity: PropTypes.number,
   onKeyboardShowDelay: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
-  androidAdjustResize: PropTypes.bool,
+  adjustResize: PropTypes.bool,
   alwaysVisible: PropTypes.bool,
   hideBorder: PropTypes.bool,
   inSafeAreaView: PropTypes.bool,
@@ -203,7 +200,7 @@ KeyboardAccessoryView.defaultProps = {
   visibleOpacity: 1,
   heightProperty: 'height',
   hiddenOpacity: 0,
-  androidAdjustResize: false,
+  adjustResize: false,
   alwaysVisible: false,
   hideBorder: false,
   inSafeAreaView: false,
